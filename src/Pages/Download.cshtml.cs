@@ -6,6 +6,7 @@ namespace MyApp.Namespace
 {
     public class PagesModel : PageModel
     {
+        public record Person(string Name, string Address, string State, DateOnly BirthDate);
         static List<Person> People = new(){ new("John", "123 1st Street", "IA", new(2000, 1, 4)),
                                             new("Sue", "921 West 2nd Rd", "IA", new(1990, 2, 5)),
                                             new("Mark", "16 32nd Ave", "ND", new(1995, 3, 6)) };
@@ -31,6 +32,4 @@ namespace MyApp.Namespace
             return File(Encoding.Default.GetBytes(fileContents), "text/csv", "my-download.txt");
         }
     }
-
-    public record Person(string Name, string Address, string State, DateOnly BirthDate);
 }
