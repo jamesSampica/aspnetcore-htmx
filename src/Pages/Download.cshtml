@@ -1,0 +1,26 @@
+﻿@page
+@model MyApp.Namespace.PagesModel
+
+<form method="post">
+    <div class="row mb-2">
+        <div class="col">
+        <label for="state" >State</label>
+            <select name="state" class="form-control">
+                <option>IA</option>
+                <option>ND</option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="from" >From</label>
+            <input type="date" name="from" class="form-control" />
+
+        </div>
+        <div class="col">
+            <label for="to" >To</label>
+            <input type="date" name="to" class="form-control" />
+        </div>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary btn-lg">Download</button>
+    </div>
+</form>
