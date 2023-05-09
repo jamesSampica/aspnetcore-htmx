@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace MyApp.Namespace
 {
-    public class PagesModel : PageModel
+    public class DownloadModel : PageModel
     {
         public record Person(string Name, string Address, string State, DateOnly BirthDate);
         static List<Person> People = new(){ new("John", "123 1st Street", "IA", new(2000, 1, 4)),
@@ -14,6 +14,12 @@ namespace MyApp.Namespace
         public void OnGet()
         {
         }
+
+         public IActionResult OnGetStates() => 
+            Content("""
+            <option>IA</option>
+            <option>ND</option>
+            """, "text/html");
 
         [BindProperty] public string? State { get; set; }
         [BindProperty] public DateOnly? From { get; set; }

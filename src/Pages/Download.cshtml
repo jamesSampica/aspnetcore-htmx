@@ -1,13 +1,11 @@
 ﻿@page
-@model MyApp.Namespace.PagesModel
+@model MyApp.Namespace.DownloadModel
 
 <form method="post">
     <div class="row mb-2">
         <div class="col">
         <label for="state" >State</label>
-            <select name="state" class="form-control">
-                <option>IA</option>
-                <option>ND</option>
+            <select name="state" class="form-control" hx-get="@Url.Page("download", "States")" hx-swap="innerHTML" hx-trigger="click once">
             </select>
         </div>
         <div class="col">
