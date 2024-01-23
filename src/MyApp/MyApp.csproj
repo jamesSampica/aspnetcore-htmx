@@ -9,4 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Hydro" Version="0.8.2" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\Components\" />
+  </ItemGroup>
 </Project>
